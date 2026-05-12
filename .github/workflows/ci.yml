@@ -1,6 +1,7 @@
 name: CI
 
 on:
+  # Run CI for changes merged into main and for PRs targeting main.
   push:
     branches: [main]
   pull_request:
@@ -8,6 +9,7 @@ on:
 
 jobs:
   ci:
+    # Keep service repos thin by delegating the real logic to apple-workflows.
     uses: RobbyPrograms/apple-workflows/.github/workflows/go-ci.yml@main
     with:
       service-name: svc-reporting

@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  ci:
+    uses: RobbyPrograms/apple-workflows/.github/workflows/go-ci.yml@main
+    with:
+      service-name: svc-reporting

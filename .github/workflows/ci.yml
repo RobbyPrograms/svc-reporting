@@ -10,4 +10,4 @@ jobs:
     if: github.event_name == 'pull_request'
     uses: RobbyPrograms/apple-workflows/.github/workflows/go-ci.yml@main
     with:
-      service-name: svc-inventory
+      service-name: svc-reporting
